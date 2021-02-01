@@ -1,7 +1,7 @@
 FROM python:3.7-alpine
-RUN apt-get update -y && apt-get install -y python-pip python-dev
+RUN apk update
 WORKDIR .
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-COPY .
+COPY . .
 CMD ["python","script_executor.py"]
