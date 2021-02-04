@@ -1,18 +1,27 @@
 #!bash
 
-# clone the android project
-# go to the project folder
-git clone $1 cloned_android_project && cd $_
+sudo chmod 777 /usr/lib/android-sdk
 
-# execute it like this - 
-# sh apk_installer_from_git.sh https://github.com/Asutosh11/CustomerSupportChat
+cd ~
 
-chmod +x ./gradlew
-./gradlew clean
+# delete the folder - 'cloned_android_project', if it already exists
+DIR=cloned_android_project
+if [ -d "$DIR" ]; then
+    sudo rm -rf "$DIR"
+fi
+
+git clone $1 cloned_android_project
+cd cloned_android_project
+
+sudo chmod +x ./gradlew
 
 touch local.properties
 echo sdk.dir=/usr/lib/android-sdk >> local.properties
 
-/usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --licenses
-
+sudo ./gradlew clean
 sudo ./gradlew assembleDebug
+
+
+
+
+
