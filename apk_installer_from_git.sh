@@ -1,7 +1,6 @@
 #!bash
 
 sudo chmod 777 /usr/lib/android-sdk
-
 cd ~
 
 # delete the folder - 'cloned_android_project', if it already exists
@@ -21,7 +20,8 @@ echo sdk.dir=/usr/lib/android-sdk >> local.properties
 sudo ./gradlew clean
 sudo ./gradlew assembleDebug
 
-
+cd app/build/outputs/apk/debug
+sudo /usr/lib/android-sdk/platform-tools/adb install app-debug.apk
 
 
 
