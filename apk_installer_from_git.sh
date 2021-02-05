@@ -17,11 +17,17 @@ sudo chmod +x ./gradlew
 touch local.properties
 echo sdk.dir=/usr/lib/android-sdk >> local.properties
 
+echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install "system-images;android-29;google_apis_playstore;x86"
+
+echo "no" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n nexus6p -k "system-images;android-29;google_apis_playstore;x86" -b x86 -c 2048M -f
+
 sudo ./gradlew clean
 sudo ./gradlew assembleDebug
 
-cd app/build/outputs/apk/debug
-sudo /usr/lib/android-sdk/platform-tools/adb install app-debug.apk
+#sudo /usr/lib/android-sdk/emulator/emulator -avd ourAVD
+
+#cd ~/cloned_android_project/app/build/outputs/apk/debug
+#sudo /usr/lib/android-sdk/platform-tools/adb install app-debug.apk
 
 
 
