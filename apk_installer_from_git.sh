@@ -1,6 +1,18 @@
 #!bash
 
+export QTWEBENGINE_DISABLE_SANDBOX=1
+echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install "system-images;android-29;google_apis_playstore;x86"
+
+echo "no" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n nexus6p -k "system-images;android-29;google_apis_playstore;x86" -b x86 -c 2048M -f
+
+
 sudo chmod 777 /usr/lib/android-sdk
+mkdir -p ~/emulator
+cp -v /usr/lib/android-sdk/emulator/* ~/emulator
+sudo chmod -R 777 ~/emulator
+sudo cp /usr/lib/android-sdk/platform-tools/adb ~
+sudo chmod 777 ~/adb
+
 cd ~
 
 # delete the folder - 'cloned_android_project', if it already exists
@@ -17,17 +29,15 @@ sudo chmod +x ./gradlew
 touch local.properties
 echo sdk.dir=/usr/lib/android-sdk >> local.properties
 
-echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install "system-images;android-29;google_apis_playstore;x86"
-
-echo "no" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n nexus6p -k "system-images;android-29;google_apis_playstore;x86" -b x86 -c 2048M -f
-
 sudo ./gradlew clean
 sudo ./gradlew assembleDebug
 
-#sudo /usr/lib/android-sdk/emulator/emulator -avd ourAVD
+cd ~/cloned_android_project/app/build/outputs/apk/debug
 
-#cd ~/cloned_android_project/app/build/outputs/apk/debug
-#sudo /usr/lib/android-sdk/platform-tools/adb install app-debug.apk
+~/emulator/emulator -avd nexus6p & adb wait-for-device && sleep 5 && ~/adb install app-debug.apk
+
+# sudo /usr/lib/android-sdk/platform-tools/adb -s nexus6p install app-debug.apk
+
 
 
 
