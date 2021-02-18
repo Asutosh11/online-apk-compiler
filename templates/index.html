@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Compile an APK from git repo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <center>
+        <br>
+
+        <div class="card border-light  mb-3">
+            <div class="card-header">
+              <a href="index.html" class="no-underline"><h5>Online APK Compiler</h5></a>
+            </div>
+
+            <div class="card-body text-dark border-light">
+                <p class="card-text"><b>What is this tool?</b></p>
+                <p class="card-text">It's an APK compiler like Jenkins but designed to easily install on a server or localhost. 
+                <br> Just enter a Git URL for an Android project and install the APK on your device directly</p>
+            </div>
+        </div>
+
+        <br>
+        <form action="/result" method="post">
+         <label for="git_url">Enter the Git URL for your Android project</label><br/>
+            <div class="input-group justify-content-center">
+             <input type="text" id="git_url" name="giturl" placeholder="Git URL"> 
+            </div>
+            <br>
+            <input type="submit" class="btn btn-success" value="Compile and install APK on a connected device">
+        </form>
+        <br>
+        <div class="footer-credits">
+            Created by <b>Asutosh Panda.</b> Tools used: 
+            <br>
+            <a href="" target="_blank">Android SDK Command-Line Tools</a> <br>
+            <a href="" target="_blank">Docker container running Ubuntu Linux</a> <br>
+            and <a href="https://www.python.org/" target="_blank">Python (flask) backend</a>
+        </div>
+    </center>
+
+</body>
+
+</html>
+
