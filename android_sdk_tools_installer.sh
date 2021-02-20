@@ -21,9 +21,15 @@ sudo mv cmdline-tools $ANDROID_HOME/
 export PATH=$ANDROID_HOME/cmdline-tools/tools/bin:$PATH
 
 cd ~
+
 echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install 'build-tools;29.0.2' 'platform-tools' 'platforms;android-29' 'tools'
 
 echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install 'build-tools;29.0.3' 'platform-tools' 'platforms;android-29' 'tools'
 
 echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install 'build-tools;30.0.3' 'platform-tools' 'platforms;android-30' 'tools'
+
+# If you need to install build-tools of different version than the ones provided above, you can do it like this -> 
+
+# echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install 'build-tools;<build-tools-version>' 'platform-tools'
+# 'platforms;android-<SdkVersion>' 'tools'
 

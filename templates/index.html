@@ -38,6 +38,17 @@
             </div>
             <input type="submit" class="btn btn-success" value="Compile and install APK on a connected device">
         </form>
+        
+        <pre id = "output">
+        {% if result%}
+          {% for line in result %}
+            {{ line }}
+          {% endfor %}
+        {% endif %}  
+        </pre>
+        
+        <br>
+        
         <br><br>
         <div class="footer-credits">
             Created by <b>Asutosh Panda.</b> <br><br>Tools used: 

@@ -1,7 +1,16 @@
 <html>
-<head>Compile an APK from git repo</head>
+{% block body %}
 <body>
-<div>Processing !!</div>
+{% if result%}
+  {% for line in result %}
+    {{ line }}
+  {% endfor %}
+{% else %}
+    <form method="post">
+        <input type="text" placeholder="Enter a number" name="counter">
+        <input type="submit" value="Submit">
+    </form>
+{% endif %}
 </body>
+{% endblock %}
 </html>
-
