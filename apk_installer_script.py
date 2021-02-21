@@ -19,7 +19,7 @@ def process_html_input():
     git_url = request.form.get("giturl") 
     
     def inner():
-        command = ['sh', 'android_sdk_tools_installer.sh']
+        command = ['sh', 'android_sdk_tools_installer.sh', git_url]
         subprocess.call(command) 
         proc = subprocess.Popen(
             command,
