@@ -1,5 +1,5 @@
 # online-apk-compiler
-<img src = "https://github.com/Asutosh11/online-apk-compiler/blob/main/static/android_image.png" height="70">
+<img src = "https://github.com/Asutosh11/online-apk-compiler/blob/main/static/android_image.png" height="50">
 
 A web app that builds an APK from public Github repo and installs it on a USB connected Android device
 
