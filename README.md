@@ -14,12 +14,12 @@ Run the build tools installer script
 ```shell
 sudo apt-get install python3-pip
 pip3 install -r requirements.txt
-python build_tools_installer_script.py
+python3 build_tools_installer_script.py
 ```
 ### Next step?
 Use the APK installer tool
 ```shell
-python apk_installer_script.py
+python3 apk_installer_script.py
 ```
 
 ### Alternative way for non-Linux personal computers
