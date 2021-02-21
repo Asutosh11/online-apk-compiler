@@ -19,7 +19,7 @@ def process_html_input():
     git_url = request.form.get("giturl") 
     
     def inner():
-        command = ['sh', 'android_sdk_tools_installer.sh', git_url]
+        command = ['sh', 'apk_installer_from_git.sh', git_url]
         subprocess.call(command) 
         proc = subprocess.Popen(
             command,
@@ -35,4 +35,4 @@ def process_html_input():
     return Response(tmpl.generate(result=result if result is None else result()))
     
 if __name__=='__main__': 
-    app.run()
+    app.run(port=8000)

@@ -2,6 +2,9 @@
 sudo apt-get update
 sudo apt-get install python3.6
 
+sudo rm -r /usr/lib/android-sdk/cmdline-tools
+sudo rm -r /usr/local/jdk-11.0.1
+
 sudo apt install curl
 curl -O https://download.java.net/java/GA/jdk11/13/GPL/openjdk-11.0.1_linux-x64_bin.tar.gz
 tar zxvf openjdk-11.0.1_linux-x64_bin.tar.gz
@@ -16,7 +19,7 @@ echo "Y" | sudo apt-get install android-sdk
 export ANDROID_HOME=/usr/lib/android-sdk
 
 wget https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip
-echo "All" | unzip commandlinetools-linux-6609375_latest.zip -d cmdline-tools
+unzip commandlinetools-linux-6609375_latest.zip -d cmdline-tools
 sudo mv cmdline-tools $ANDROID_HOME/
 export PATH=$ANDROID_HOME/cmdline-tools/tools/bin:$PATH
 
@@ -32,4 +35,6 @@ echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --instal
 
 # echo "y" | sudo /usr/lib/android-sdk/cmdline-tools/tools/bin/sdkmanager --install 'build-tools;<build-tools-version>' 'platform-tools'
 # 'platforms;android-<SdkVersion>' 'tools'
+
+trap exit INT
 
