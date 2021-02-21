@@ -21,14 +21,14 @@ sudo sh android_sdk_tools_installer.sh
 sudo python3 apk_installer_script.py
 ```
 
-### How to install on non-linux systems?
+### How to install on mac and windows systems?
 Use Docker to install and run the web app
 
 <a href = "https://docs.docker.com/engine/install/">Install Docker from here</a>
 
 ```shell
-sudo docker build -t online-apk-compiler .
-sudo docker run online-apk-compiler:latest
+docker build -t online-apk-compiler .
+docker run online-apk-compiler:latest
 ```
 
 
