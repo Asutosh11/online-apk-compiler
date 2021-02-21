@@ -1,5 +1,5 @@
 # online-apk-compiler
-A web app that builds an APK from Github repository URL and installs it on a USB connected Android device
+A web app that builds an APK from public Github repo and installs it on a USB connected Android device
 
 ### Requirements
 
@@ -31,4 +31,7 @@ Can use the Dockerfile in the project to install the tools
 <img src = "https://github.com/Asutosh11/online-apk-compiler/blob/main/screenshots/apk_installer.png">
 
 
+### Features pending for upcoming releases
+1. Support for private git repos (As of now, the tool only supports public git repos)
+2. Feature to check if device is connected via USB or not (As of now, the tool only assumes that the device is connected via USB)
 
