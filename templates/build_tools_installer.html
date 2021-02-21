@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Compile an APK from git repo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <center>
+        <div class="card border-light header mb-3">
+            <div class="card-header">
+              <img class="logo" src="/static/android_image.png">
+              <br/>
+              <a href="index.html" class="no-underline title"><h5>Online APK Compiler</h5></a>
+            </div>
+
+            <div class="card-body text-dark border-light">
+                <p class="card-text">A web app that builds an APK from Git URL and installs it on a USB connected device 
+            </div>
+        </div>
+
+        <br>
+        <form action="/build-tools-result" method="post">
+        <input type="submit" class="btn btn-success" value="Install Android Command line tools">
+        </form>
+        
+         <br>
+        
+        <div class=terminal_top_bar>
+        Console
+        </div>
+        
+        <div class="terminal">
+         <p class="terminal_text">
+         {% if result%}
+          {% for line in result %}
+            {{ line }}
+          {% endfor %}
+        {% else %}
+        {% endif %}
+         </p>
+        </div>
+    
+        
+        <br><br>
+        <div class="footer-credits">
+            <a href = "https://github.com/Asutosh11">Created by Asutosh Panda</a>
+        </div>
+    </center>
+
+</body>
+
+</html>
+

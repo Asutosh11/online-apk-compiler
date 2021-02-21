@@ -7,4 +7,4 @@ WORKDIR .
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
-CMD ["python","script_executor.py"]
+CMD ["python","build_tools_installer_script.py"]
