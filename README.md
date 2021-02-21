@@ -17,7 +17,7 @@ sudo pip3 install -r requirements.txt
 sudo sh android_sdk_tools_installer.sh
 ```
 ### Next step?
-Use the APK installer tool
+Run the APK installer tool
 ```shell
 sudo python3 apk_installer_script.py
 ```
