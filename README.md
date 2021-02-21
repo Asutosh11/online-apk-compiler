@@ -12,7 +12,8 @@ A web app that builds an APK from Github repository URL and installs it on a USB
 ### How to Install?
 Run the build tools installer script
 ```shell
-pip install -r requirements.txt
+sudo apt-get install python3-pip
+pip3 install -r requirements.txt
 python build_tools_installer_script.py
 ```
 ### Next step?
