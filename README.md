@@ -5,7 +5,8 @@ A web app that builds an APK from Github repository URL and installs it on a USB
 
 1. A server running Linux (or a localhost)
 2. Python 3.x installed
-3. As of now this tools installs build tools 29.0.2, 29.0.3, 30.0.3. If you want other versions, follow the comments in this file - ```android_sdk_tools_installer.sh```
+3. As of now this tools installs <i>build tools 29.0.2, 29.0.3, 30.0.3</i>. 
+   If you want other versions, follow the comments in this file - ```android_sdk_tools_installer.sh```
 
 
 ### How to Install?
