@@ -29,6 +29,8 @@ Can use the Dockerfile in the project to install the tools
 
 <img src = "https://github.com/Asutosh11/online-apk-compiler/blob/main/screenshots/build_tools_installer.png">
 
+<hr>
+
 <img src = "https://github.com/Asutosh11/online-apk-compiler/blob/main/screenshots/apk_installer.png">
 
 
