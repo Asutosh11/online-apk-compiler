@@ -7,4 +7,4 @@ WORKDIR .
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 COPY . .
-CMD ["python","build_tools_installer_script.py"]
+CMD ["sudo","sh","docker_run_sript.sh"]
