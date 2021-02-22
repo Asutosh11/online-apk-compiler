@@ -5,7 +5,7 @@ A web app that builds an APK from public Github repo and installs it on a USB co
 
 ### Requirements
 
-1. A server or a desktop running Linux
+1. A system/server running Linux, Mac or Windows
 2. Python 3.x installed
 3. As of now this web app installs <i>build tools 29.0.2, 29.0.3, 30.0.3</i>. 
    If you want other versions, follow the comments in this file - ```android_sdk_tools_installer.sh```
