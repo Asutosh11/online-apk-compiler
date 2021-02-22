@@ -35,4 +35,4 @@ def process_html_input():
     return Response(tmpl.generate(result=result if result is None else result()))
     
 if __name__=='__main__': 
-    app.run(port=8000)
+    app.run(host='0.0.0.0')
