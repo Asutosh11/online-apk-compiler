@@ -11,20 +11,20 @@ A web app that builds an APK from public Github repo and installs it on a USB co
    If you want other versions, follow the comments in this file - ```android_sdk_tools_installer.sh```
 
 
-### How to Install on Linux?
+### How to Install on Linux (without using Docker)?
 Run the build tools installer script
 ```shell
 sudo apt-get install python3-pip
 sudo pip3 install -r requirements.txt
 sudo sh android_sdk_tools_installer.sh
 ```
-### How to run it on Linux?
+### How to run it on Linux (without using Docker)?
 ```shell
 sudo python3 apk_installer_script.py
 ```
 
-### How to install and run on mac and windows systems?
-Use Docker to install and run the web app. The ```Dockerfile``` is in the project root folder.
+### How to install and run on Mac/Windows/Linux (using Docker)?
+The ```Dockerfile``` is in the project root folder.
 
 <a href = "https://docs.docker.com/engine/install/" target="_blank">Install Docker from here</a>
 
