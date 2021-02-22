@@ -43,6 +43,7 @@ docker run online-apk-compiler:latest
 1. Support for private git repos (As of now, this web app only supports public git repos)
 2. Feature to check if device is connected via USB or not (As of now, this web app assumes that the device is connected via USB)
 3. There is a delay in printing console output, need to make it faster
+4. Need to migrate the Python backend from Flask to FastAPI for faster performance
 
 ### Logo credits 
 mohamed_hassan at Pixabay <br>
