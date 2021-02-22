@@ -24,9 +24,9 @@ sudo python3 apk_installer_script.py
 ```
 
 ### How to install and run on mac and windows systems?
-Use Docker to install and run the web app. The Dockerfile is in the project root folder.
+Use Docker to install and run the web app. The ```Dockerfile``` is in the project root folder.
 
-<a href = "https://docs.docker.com/engine/install/">Install Docker from here</a>
+<a href = "https://docs.docker.com/engine/install/" target="_blank">Install Docker from here</a>
 
 ```shell
 docker build -t online-apk-compiler .
